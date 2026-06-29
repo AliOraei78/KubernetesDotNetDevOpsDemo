@@ -1,0 +1,6 @@
+@KubernetesDotNetDevOpsDemo_HostAddress = http://localhost:5139
+
+GET {{KubernetesDotNetDevOpsDemo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

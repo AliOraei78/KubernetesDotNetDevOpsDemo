@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: devopsdemo-deployment
+  labels:
+    app: devopsdemo
 spec:
   replicas: 2         
   selector:
@@ -14,7 +16,13 @@ spec:
     spec:
       containers:
       - name: devopsdemo
-        image: kubernetesdotnetdevopsdemo:latest 
-        imagePullPolicy: Never # <--- Add this line
+        image: kubernetesdotnetdevopsdemo:latest
         ports:
         - containerPort: 8080
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "500m"
+            memory: "256Mi"

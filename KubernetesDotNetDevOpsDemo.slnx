@@ -1,6 +1,7 @@
 <Solution>
   <Folder Name="/k8s/">
     <File Path="k8s/deployment.yaml" />
+    <File Path="k8s/service.yaml" />
   </Folder>
   <Folder Name="/Solution Items/">
     <File Path="Dockerfile" />
